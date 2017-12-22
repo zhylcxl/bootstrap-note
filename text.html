@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/table.css">
+	<link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+	<div class="wrap">
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-left">
+					<a class="navbar-brand" href="#">Bootstrap</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">首页</a></li>
+					<li><a href="http://www.bootcss.com/" target="_blanket">Bootstrap中文网</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h2>Bootstrap</h2>
+				<p>文本样式可以为文本添加不同颜色样式。</p>
+			</div>
+		</div>
+		<div class="main container">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="list-group">
+						<a class="list-group-item-title list-group-title-start">
+							<span class="glyphicon glyphicon-tags"></span>
+							入门基础
+						</a>
+						<div class="list-group-start">
+							<a href="bootstrap_hello.html" class="list-group-item">Hello Bootstrap</a>
+							<a href="template.html" class="list-group-item">Bootstrap模板</a>
+						</div>
+						<a class="list-group-item-title list-group-title-style">
+							<span class="glyphicon glyphicon-tags"></span>
+							全局样式
+						</a>
+						<div class="list-group-style">
+							<a href="table.html" class="list-group-item">表格</a>
+							<a href="form.html" class="list-group-item">表单</a>
+							<a href="button.html" class="list-group-item">按钮</a>
+							<a href="image.html" class="list-group-item">图片</a>
+							<a href="#" class="list-group-item active">文本</a>
+							<a href="background_color.html" class="list-group-item">背景色</a>
+							<a href="helper_classes.html" class="list-group-item">辅助类</a>
+							<a href="#" class="list-group-item">栅格系统</a>
+						</div>
+						<a class="list-group-item-title list-group-title-components">
+							<span class="glyphicon glyphicon-tags"></span>
+							组件
+						</a>
+						<div class="list-group-components">
+							<a href="#" class="list-group-item">字体图标</a>
+							<a href="#" class="list-group-item">下拉菜单</a>
+							<a href="#" class="list-group-item">按钮组</a>
+							<a href="#" class="list-group-item">按钮式下拉菜单</a>
+							<a href="#" class="list-group-item">输入框组</a>
+							<a href="#" class="list-group-item">导航</a>
+							<a href="#" class="list-group-item">导航条</a>
+							<a href="#" class="list-group-item">路径导航</a>
+							<a href="#" class="list-group-item">分页</a>
+							<a href="#" class="list-group-item">标签</a>
+							<a href="#" class="list-group-item">徽章</a>
+							<a href="#" class="list-group-item">巨幕</a>
+							<a href="#" class="list-group-item">页头</a>
+							<a href="#" class="list-group-item">缩略图</a>
+							<a href="#" class="list-group-item">警告框</a>
+							<a href="#" class="list-group-item">栅格系统</a>
+							<a href="#" class="list-group-item">进度条</a>
+							<a href="#" class="list-group-item">媒体对象</a>
+							<a href="#" class="list-group-item">列表组</a>
+							<a href="#" class="list-group-item">Well</a>
+						</div>
+						<a class="list-group-item-title list-group-title-javascript">
+							<span class="glyphicon glyphicon-tags"></span>
+							插件
+						</a>
+						<div class="list-group-javascript">
+							<a href="#" class="list-group-item">模态框</a>
+							<a href="#" class="list-group-item">下拉菜单</a>
+							<a href="#" class="list-group-item">滚动监听</a>
+							<a href="#" class="list-group-item">标签页</a>
+							<a href="#" class="list-group-item">工具提示</a>
+							<a href="#" class="list-group-item">弹出框</a>
+							<a href="#" class="list-group-item">警告框</a>
+							<a href="#" class="list-group-item">轮播</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<div id="first">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<span>文本样式</span>
+							</div>
+							<div class="panel-body">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>类名</th>
+											<th>效果</th>
+											<th>描述</th>
+											<th>复制</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><code id="className1">text-muted</code></td>
+											<td><span class="text-muted">text-muted</span></td>
+											<td>淡灰色文本</td>
+											<td>
+												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className1">
+													复制类名
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><code id="className2">text-primary</code></td>
+											<td><span class="text-primary">text-primary</span></td>
+											<td>强调的文本</td>
+											<td>
+												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className2">
+													复制类名
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><code id="className3">text-success</code></td>
+											<td><span class="text-success">text-success</span></td>
+											<td>操作成功文本</td>
+											<td>
+												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className3">
+													复制类名
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><code id="className4">text-info</code></td>
+											<td><span class="text-info">text-info</span></td>
+											<td>提示信息文本</td>
+											<td>
+												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className4">
+													复制类名
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><code id="className5">text-warning</code></td>
+											<td><span class="text-warning">text-warning</span></td>
+											<td>警告文本</td>
+											<td>
+												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className5">
+													复制类名
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><code id="className6">text-danger</code></td>
+											<td><span class="text-danger">text-danger</span></td>
+											<td>危险操作文本</td>
+											<td>
+												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className6">
+													复制类名
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<ul class="pager">
+						<li class="previous"><a href="image.html"><span>&larr;</span> Older</a></li>
+						<li class="next"><a href="background_color.html">Newer <span>&rarr;</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>天行健 君子以自强不息！地势坤 君子以厚德载物！</p>
+		</div>
+	</div>
+	<div class="to-top"><a href="#"><span class="glyphicon glyphicon-arrow-up"></span></a></div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script>
+		var clipboard = new Clipboard('.btn-clipboard');
+		var clipboard = new Clipboard('.copy-to-clipboard');
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

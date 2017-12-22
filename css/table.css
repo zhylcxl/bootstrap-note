@@ -1,0 +1,15 @@
+.list-group-start {
+	display: none;
+}
+
+.list-group-components {
+	display: none;
+}
+
+.list-group-javascript {
+	display: none;
+}
+
+.bs-example>.table {
+	margin-bottom: 0;
+}
