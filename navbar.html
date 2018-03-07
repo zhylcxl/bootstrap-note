@@ -5,7 +5,7 @@
 	<title>Hello Bootstrap</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/table.css">
+	<link rel="stylesheet" href="css/glyphicons.css">
 	<link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -24,7 +24,7 @@
 		<div class="jumbotron">
 			<div class="container">
 				<h2>Bootstrap</h2>
-				<p>关闭按钮、三角符号、快速浮动、让内容块居中、清除浮动、显示或隐藏内容。</p>
+				<p>导航条是在您的应用或网站中作为导航页头的响应式基础组件。它们在移动设备上可以折叠（并且可开可关），且在视口（viewport）宽度增加时逐渐变为水平展开模式。</p>
 			</div>
 		</div>
 		<div class="main container">
@@ -50,7 +50,7 @@
 							<a href="image.html" class="list-group-item">图片</a>
 							<a href="text.html" class="list-group-item">文本</a>
 							<a href="background_color.html" class="list-group-item">背景色</a>
-							<a href="#" class="list-group-item active">辅助类</a>
+							<a href="helper_classes.html" class="list-group-item">辅助类</a>
 							<a href="grid.html" class="list-group-item">栅格系统</a>
 						</div>
 						<a class="list-group-item-title list-group-title-components">
@@ -64,7 +64,7 @@
 							<a href="btn_dropdown.html" class="list-group-item">按钮式下拉菜单</a>
 							<a href="input_group.html" class="list-group-item">输入框组</a>
 							<a href="nav.html" class="list-group-item">导航</a>
-							<a href="navbar.html" class="list-group-item">导航条</a>
+							<a href="#" class="list-group-item active">导航条</a>
 							<a href="breadcrumbs.html" class="list-group-item">路径导航</a>
 							<a href="pagination.html" class="list-group-item">分页</a>
 							<a href="labels.html" class="list-group-item">标签</a>
@@ -94,15 +94,14 @@
 				<div class="col-xs-9">
 					<div>
 						<div class="panel panel-success">
-							<div class="panel-heading">各种辅助类</div>
+							<div class="panel-heading">导航条</div>
 						</div>
 						<ol>
-							<li><a href="#first">关闭按钮</a></li>
-							<li><a href="#second">三角符号</a></li>
-							<li><a href="#third">快速浮动</a></li>
-							<li><a href="#fourth">让内容块居中</a></li>
-							<li><a href="#fifth">清除浮动</a></li>
-							<li><a href="#sixth">显示或隐藏内容</a></li>
+							<li><a href="#first">默认样式的导航条</a></li>
+							<li><a href="#second">固定在顶部</a></li>
+							<li><a href="#third">固定在底部</a></li>
+							<li><a href="#fourth">静止在顶部</a></li>
+							<li><a href="#fifth">反色的导航条</a></li>
 						</ol>
 					</div>
 					<div id="first">
@@ -114,13 +113,29 @@
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-1')">
 									示例代码
 								</button>
-								<span><code id="className1">close</code></span>
+								<span><code id="className1">navbar navbar-default</code></span>
 							</div>
 							<div class="panel-body">
 								<div class="bs-example"><span>示例：</span><br>
-									<button type="button" class="close" style="float: left;">
-										<span>&times;</span>
-									</button>
+									<div role="navigation" class="navbar navbar-default">
+										<div class="container-fluid">
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+												<a class="navbar-brand" href="#">Brand</a>
+											</div>
+											<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+												<ul class="nav navbar-nav">
+													<li><a href="javascript:void(0)">Link</a></li>
+													<li><a href="javascript:void(0)">Link</a></li>
+													<li><a href="javascript:void(0)">Link</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="panel-footer" id="panel-footer-1">
@@ -128,9 +143,25 @@
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code1"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span&gt;</span>&amp;times;<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/button&gt;</span></code></pre>
+<pre><code id="code1">&lt;div role="navigation" class="navbar navbar-default"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;div class="navbar-header"&gt;
+            &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+            &lt;a class="navbar-brand" href="#"&gt;Brand&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+            &lt;ul class="nav navbar-nav"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
@@ -144,19 +175,16 @@
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-2')">
 									示例代码
 								</button>
-								<span><code id="className2">caret</code></span>
-							</div>
-							<div class="panel-body">
-								<div class="bs-example"><span>示例：</span><br>
-									<span class="caret"></span>
-								</div>
+								<span><code id="className2">navbar-fixed-top</code></span>
 							</div>
 							<div class="panel-footer" id="panel-footer-2">
 								<div class="zero-clipboard">
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code2" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code2">&lt;span class="caret"&gt;&lt;/span&gt;</code></pre>
+<pre><code id="code2">&lt;div role="navigation" class="navbar navbar-default navbar-fixed-top"&gt;
+    ...
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
@@ -164,50 +192,22 @@
 					<div id="third">
 						<div class="panel panel-info">
 							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className3">
+									复制类名
+								</button>
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-3')">
 									示例代码
 								</button>
-								<span>快速浮动</span>
-							</div>
-							<div class="panel-body">
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th>类名</th>
-											<th>复制</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><code id="className31">pull-left</code></td>
-											<td>
-												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className31">
-													复制类名
-												</button>
-											</td>
-										</tr>
-										<tr>
-											<td><code id="className32">pull-right</code></td>
-											<td>
-												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className32">
-													复制类名
-												</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="bs-example"><span>示例：</span><br>
-									<div class="pull-left">pull-left</div>
-									<div class="pull-right">pull-right</div>
-								</div>
+								<span><code id="className3">navbar-fixed-bottom</code></span>
 							</div>
 							<div class="panel-footer" id="panel-footer-3">
 								<div class="zero-clipboard">
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code3" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code3">&lt;div class="pull-left"&gt;pull-left&lt;/div&gt;
-&lt;div class="pull-right"&gt;pull-right&lt;/div&gt;</code></pre>
+<pre><code id="code3">&lt;div role="navigation" class="navbar navbar-default navbar-fixed-bottom"&gt;
+    ...
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
@@ -221,19 +221,16 @@
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-4')">
 									示例代码
 								</button>
-								<span><code id="className4">center-block</code></span>
-							</div>
-							<div class="panel-body">
-								<div class="bs-example"><span>示例：</span><br>
-									<div class="center-block" style="width: 100px">center-block</div>
-								</div>
+								<span><code id="className4">navbar-static-top</code></span>
 							</div>
 							<div class="panel-footer" id="panel-footer-4">
 								<div class="zero-clipboard">
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code4" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code4">&lt;div class="center-block" style="width: 100px"&gt;center-block&lt;/div&gt;</code></pre>
+<pre><code id="code4">&lt;div role="navigation" class="navbar navbar-default navbar-static-top"&gt;
+    ...
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
@@ -247,67 +244,62 @@
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-5')">
 									示例代码
 								</button>
-								<span><code id="className5">clearfix</code></span>
+								<span><code id="className5">navbar navbar-inverse</code></span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<div role="navigation" class="navbar navbar-inverse" style="background-color: #222;">
+										<div class="container-fluid">
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+												<a class="navbar-brand" href="#">Brand</a>
+											</div>
+											<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+												<ul class="nav navbar-nav">
+													<li class="active"><a href="javascript:void(0)">Link</a></li>
+													<li><a href="javascript:void(0)">Link</a></li>
+													<li><a href="javascript:void(0)">Link</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="panel-footer" id="panel-footer-5">
 								<div class="zero-clipboard">
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code5" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code5"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
+<pre><code id="code5">&lt;div role="navigation" class="navbar navbar-inverse"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;div class="navbar-header"&gt;
+            &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+            &lt;a class="navbar-brand" href="#"&gt;Brand&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+            &lt;ul class="nav navbar-nav"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
 					</div>
-					<div id="six">
-						<div class="panel panel-info">
-							<div class="panel-heading example-head">
-								<span>显示或隐藏内容</span>
-							</div>
-							<div class="panel-body">
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th>类名</th>
-											<th>复制</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><code id="className61">show</code></td>
-											<td>
-												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className61">
-													复制类名
-												</button>
-											</td>
-										</tr>
-										<tr>
-											<td><code id="className62">hidden</code></td>
-											<td>
-												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className62">
-													复制类名
-												</button>
-											</td>
-										</tr>
-										<tr>
-											<td><code id="className63">invisible </code></td>
-											<td>
-												<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className63">
-													复制类名
-												</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
 					<ul class="pager">
-						<li class="previous"><a href="background_color.html"><span>&larr;</span> Older</a></li>
-						<li class="next"><a href="grid.html">Newer <span>&rarr;</span></a></li>
+						<li class="previous"><a href="nav.html"><span>&larr;</span> Older</a></li>
+						<li class="next"><a href="breadcrumbs.html">Newer <span>&rarr;</span></a></li>
 					</ul>
 				</div>
 			</div>

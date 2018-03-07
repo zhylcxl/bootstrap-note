@@ -5,7 +5,7 @@
 	<title>Hello Bootstrap</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/table.css">
+	<link rel="stylesheet" href="css/glyphicons.css">
 	<link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -24,7 +24,7 @@
 		<div class="jumbotron">
 			<div class="container">
 				<h2>Bootstrap</h2>
-				<p>在 Bootstrap 版本 3 中，通过为图片添加 <code>.img-responsive</code> 类可以让图片支持响应式布局。其实质是为图片设置了 <code>max-width: 100%;</code>、 <code>height: auto;</code> 和 <code>display: block;</code> 属性，从而让图片在其父元素中更好的缩放。</p>
+				<p>把任意一个按钮放入 <code>.btn-group</code> 中，然后加入适当的菜单标签，就可以让按钮作为菜单的触发器了。</p>
 			</div>
 		</div>
 		<div class="main container">
@@ -47,7 +47,7 @@
 							<a href="table.html" class="list-group-item">表格</a>
 							<a href="form.html" class="list-group-item">表单</a>
 							<a href="button.html" class="list-group-item">按钮</a>
-							<a href="#" class="list-group-item  active">图片</a>
+							<a href="image.html" class="list-group-item">图片</a>
 							<a href="text.html" class="list-group-item">文本</a>
 							<a href="background_color.html" class="list-group-item">背景色</a>
 							<a href="helper_classes.html" class="list-group-item">辅助类</a>
@@ -61,7 +61,7 @@
 							<a href="glyphicons.html" class="list-group-item">字体图标</a>
 							<a href="dropdowns.html" class="list-group-item">下拉菜单</a>
 							<a href="button_group.html" class="list-group-item">按钮组</a>
-							<a href="btn_dropdown.html" class="list-group-item">按钮式下拉菜单</a>
+							<a href="#" class="list-group-item active">按钮式下拉菜单</a>
 							<a href="input_group.html" class="list-group-item">输入框组</a>
 							<a href="nav.html" class="list-group-item">导航</a>
 							<a href="navbar.html" class="list-group-item">导航条</a>
@@ -94,12 +94,12 @@
 				<div class="col-xs-9">
 					<div>
 						<div class="panel panel-success">
-							<div class="panel-heading">图片形状</div>
+							<div class="panel-heading">按钮式下拉菜单</div>
 						</div>
 						<ol>
-							<li><a href="#first">圆角</a></li>
-							<li><a href="#second">圆形</a></li>
-							<li><a href="#third">缩略图</a></li>
+							<li><a href="#first">单按钮下拉菜单</a></li>
+							<li><a href="#second">分裂式按钮下拉菜单</a></li>
+							<li><a href="#third">尺寸</a></li>
 						</ol>
 					</div>
 					<div id="first">
@@ -111,11 +111,21 @@
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-1')">
 									示例代码
 								</button>
-								<span><code id="className1">img-rounded</code></span>
+								<span><code id="className1">btn-group</code></span>
 							</div>
 							<div class="panel-body">
 								<div class="bs-example"><span>示例：</span><br>
-									<img src="images/img1.jpg" alt="圆角图片" class="img-rounded" style="width: 140px; height: 140px;">
+									<div class="btn-group" role="group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="panel-footer" id="panel-footer-1">
@@ -123,7 +133,17 @@
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code1">&lt;img src="..." alt="圆角图片" class="img-rounded"&gt;</code></pre>
+<pre><code id="code1">&lt;div class="btn-group" role="group"&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+        Dropdown
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a&gt;item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
@@ -131,17 +151,24 @@
 					<div id="second">
 						<div class="panel panel-info">
 							<div class="panel-heading example-head">
-								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className2">
-									复制类名
-								</button>
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-2')">
 									示例代码
 								</button>
-								<span><code id="className2">img-circle</code></span>
+								<span>分裂式按钮下拉菜单</span>
 							</div>
 							<div class="panel-body">
 								<div class="bs-example"><span>示例：</span><br>
-									<img src="images/img2.jpg" alt="圆角图片" class="img-circle" style="width: 140px; height: 140px;">
+									<div class="btn-group" role="group">
+										<button type="button" class="btn btn-default">Dropdown</button>
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="panel-footer" id="panel-footer-2">
@@ -149,7 +176,17 @@
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code2" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code2">&lt;img src="..." alt="圆形图片" class="img-circle"&gt;</code></pre>
+<pre><code id="code2">&lt;div class="btn-group" role="group"&gt;
+    &lt;button type="button" class="btn btn-default"&gt;Dropdown&lt;/button&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a&gt;lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
@@ -163,11 +200,43 @@
 								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-3')">
 									示例代码
 								</button>
-								<span><code id="className3">img-thumbnail</code></span>
+								<span><code id="className3">btn-*</code></span>
 							</div>
 							<div class="panel-body">
 								<div class="bs-example"><span>示例：</span><br>
-									<img src="images/img3.jpg" alt="缩略图" class="img-thumbnail" style="width: 140px; height: 140px;">
+									<div class="btn-group" role="group">
+										<button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+										</ul>
+									</div>
+									<div class="btn-group" role="group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+										</ul>
+									</div>
+									<div class="btn-group" role="group">
+										<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+											<li><a>item</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="panel-footer" id="panel-footer-3">
@@ -175,14 +244,22 @@
 									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code3" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
 								</div>
 								<figure>
-<pre><code id="code3">&lt;img src="..." alt="缩略图" class="img-thumbnail"&gt;</code></pre>
+<pre><code id="code3">&lt;div class="btn-group" role="group"&gt;
+    &lt;button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"&gt;
+        Dropdown
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 								</figure>
 							</div>
 						</div>
 					</div>
 					<ul class="pager">
-						<li class="previous"><a href="button.html"><span>&larr;</span> Older</a></li>
-						<li class="next"><a href="text.html">Newer <span>&rarr;</span></a></li>
+						<li class="previous"><a href="button_group.html"><span>&larr;</span> Older</a></li>
+						<li class="next"><a href="input_group.html">Newer <span>&rarr;</span></a></li>
 					</ul>
 				</div>
 			</div>

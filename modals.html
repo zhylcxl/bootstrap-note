@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/modals.css">
+	<link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+	<div class="wrap">
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-left">
+					<a class="navbar-brand" href="#">Bootstrap</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">首页</a></li>
+					<li><a href="http://www.bootcss.com/" target="_blanket">Bootstrap中文网</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h2>Bootstrap</h2>
+				<p>模态框经过了优化，更加灵活，以弹出对话框的形式出现，具有最小和最实用的功能集。</p>
+			</div>
+		</div>
+		<div class="main container">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="list-group">
+						<a class="list-group-item-title list-group-title-start">
+							<span class="glyphicon glyphicon-tags"></span>
+							入门基础
+						</a>
+						<div class="list-group-start">
+							<a href="bootstrap_hello.html" class="list-group-item">Hello Bootstrap</a>
+							<a href="template.html" class="list-group-item">Bootstrap模板</a>
+						</div>
+						<a class="list-group-item-title list-group-title-style">
+							<span class="glyphicon glyphicon-tags"></span>
+							全局样式
+						</a>
+						<div class="list-group-style">
+							<a href="table.html" class="list-group-item">表格</a>
+							<a href="form.html" class="list-group-item">表单</a>
+							<a href="button.html" class="list-group-item">按钮</a>
+							<a href="image.html" class="list-group-item">图片</a>
+							<a href="text.html" class="list-group-item">文本</a>
+							<a href="background_color.html" class="list-group-item">背景色</a>
+							<a href="helper_classes.html" class="list-group-item">辅助类</a>
+							<a href="grid.html" class="list-group-item">栅格系统</a>
+						</div>
+						<a class="list-group-item-title list-group-title-components">
+							<span class="glyphicon glyphicon-tags"></span>
+							组件
+						</a>
+						<div class="list-group-components">
+							<a href="glyphicons.html" class="list-group-item">字体图标</a>
+							<a href="dropdowns.html" class="list-group-item">下拉菜单</a>
+							<a href="button_group.html" class="list-group-item">按钮组</a>
+							<a href="btn_dropdown.html" class="list-group-item">按钮式下拉菜单</a>
+							<a href="input_group.html" class="list-group-item">输入框组</a>
+							<a href="nav.html" class="list-group-item">导航</a>
+							<a href="navbar.html" class="list-group-item">导航条</a>
+							<a href="breadcrumbs.html" class="list-group-item">路径导航</a>
+							<a href="pagination.html" class="list-group-item">分页</a>
+							<a href="labels.html" class="list-group-item">标签</a>
+							<a href="badges.html" class="list-group-item">徽章</a>
+							<a href="jumbotron.html" class="list-group-item">巨幕</a>
+							<a href="page_header.html" class="list-group-item">页头</a>
+							<a href="thumbnails.html" class="list-group-item">缩略图</a>
+							<a href="alerts.html" class="list-group-item">警告框</a>
+							<a href="progress.html" class="list-group-item">进度条</a>
+							<a href="panels.html" class="list-group-item">面板</a>
+							<a href="list_group.html" class="list-group-item">列表组</a>
+							<a href="well.html" class="list-group-item">Well</a>
+						</div>
+						<a class="list-group-item-title list-group-title-javascript">
+							<span class="glyphicon glyphicon-tags"></span>
+							插件
+						</a>
+						<div class="list-group-javascript">
+							<a href="#" class="list-group-item active">模态框</a>
+							<a href="scrollspy.html" class="list-group-item">滚动监听</a>
+							<a href="tabs.html" class="list-group-item">标签页</a>
+							<a href="tooltips.html" class="list-group-item">工具提示</a>
+							<a href="carousel.html" class="list-group-item">轮播</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<div>
+						<div class="panel panel-success">
+							<div class="panel-heading">模态框</div>
+						</div>
+						<ol>
+							<li><a href="#first">静态模态窗口</a></li>
+							<li><a href="#second">动态模态窗口</a></li>
+							<li><a href="#third">禁止动画效果</a></li>
+							<li><a href="#fourth">点击空白不会收起</a></li>
+						</ol>
+					</div>
+					<div id="first">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-1')">
+									示例代码
+								</button>
+								<span>静态模态窗口</span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">
+													<span>&times;</span>
+												</button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												<p>One fine body&hellip;</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-1">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code1">&lt;div class="modal-dialog" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header"&gt;
+            &lt;button type="button" class="close" data-dismiss="modal"&gt;
+                &lt;span&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+            &lt;p&gt;One fine body&amp;hellip;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+            &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="second">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-2')">
+									示例代码
+								</button>
+								<span>动态模态窗口</span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
+										Launch demo modal
+									</button>
+									<div class="modal fade" id="myModal1" role="dailog">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">
+														<span>&times;</span>
+													</button>
+													<h4 class="modal-title">Modal title</h4>
+												</div>
+												<div class="modal-body">
+													<p>One fine body&hellip;</p>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-primary">Save changes</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-2">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code2" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code2">&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1"&gt;
+    Launch demo modal
+&lt;/button&gt;
+&lt;div class="modal fade" id="myModal1" role="dailog"&gt;
+    &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;button type="button" class="close" data-dismiss="modal"&gt;
+                    &lt;span&gt;&amp;times;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;One fine body&amp;hellip;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="third">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-3')">
+									示例代码
+								</button>
+								<span>禁止动画效果</span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+										Launch demo modal
+									</button>
+									<div class="modal" id="myModal2" role="dailog">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">
+														<span>&times;</span>
+													</button>
+													<h4 class="modal-title">Modal title</h4>
+												</div>
+												<div class="modal-body">
+													<p>One fine body&hellip;</p>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-primary">Save changes</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-3">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code3" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code3">&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2"&gt;
+    Launch demo modal
+&lt;/button&gt;
+&lt;div class="modal" id="myModal2" role="dailog"&gt;
+    &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;button type="button" class="close" data-dismiss="modal"&gt;
+                    &lt;span&gt;&amp;times;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;One fine body&amp;hellip;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="fourth">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-4')">
+									示例代码
+								</button>
+								<span>点击空白不会收起</span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+										Launch demo modal
+									</button>
+									<div class="modal fade" id="myModal3" data-backdrop="static" role="dailog">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">
+														<span>&times;</span>
+													</button>
+													<h4 class="modal-title">Modal title</h4>
+												</div>
+												<div class="modal-body">
+													<p>One fine body&hellip;</p>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-primary">Save changes</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-4">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code4" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code4">&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3"&gt;
+    Launch demo modal
+&lt;/button&gt;
+&lt;div class="modal fade" id="myModal3" data-backdrop="static" role="dailog"&gt;
+    &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;button type="button" class="close" data-dismiss="modal"&gt;
+                    &lt;span&gt;&amp;times;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;One fine body&amp;hellip;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<ul class="pager">
+						<li class="previous"><a href="well.html"><span>&larr;</span> Older</a></li>
+						<li class="next"><a href="scrollspy.html">Newer <span>&rarr;</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>天行健 君子以自强不息！地势坤 君子以厚德载物！</p>
+		</div>
+	</div>
+	<div class="to-top"><a href="#"><span class="glyphicon glyphicon-arrow-up"></span></a></div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script>
+		var clipboard = new Clipboard('.btn-clipboard');
+		var clipboard = new Clipboard('.copy-to-clipboard');
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

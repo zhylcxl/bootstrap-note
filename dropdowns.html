@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/glyphicons.css">
+	<link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+	<div class="wrap">
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-left">
+					<a class="navbar-brand" href="#">Bootstrap</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">首页</a></li>
+					<li><a href="http://www.bootcss.com/" target="_blanket">Bootstrap中文网</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h2>Bootstrap</h2>
+				<p>用于显示链接列表的可切换、有上下文的菜单。下拉菜单的 JavaScript 插件让它具有了交互性。</p>
+			</div>
+		</div>
+		<div class="main container">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="list-group">
+						<a class="list-group-item-title list-group-title-start">
+							<span class="glyphicon glyphicon-tags"></span>
+							入门基础
+						</a>
+						<div class="list-group-start">
+							<a href="bootstrap_hello.html" class="list-group-item">Hello Bootstrap</a>
+							<a href="template.html" class="list-group-item">Bootstrap模板</a>
+						</div>
+						<a class="list-group-item-title list-group-title-style">
+							<span class="glyphicon glyphicon-tags"></span>
+							全局样式
+						</a>
+						<div class="list-group-style">
+							<a href="table.html" class="list-group-item">表格</a>
+							<a href="form.html" class="list-group-item">表单</a>
+							<a href="button.html" class="list-group-item">按钮</a>
+							<a href="image.html" class="list-group-item">图片</a>
+							<a href="text.html" class="list-group-item">文本</a>
+							<a href="background_color.html" class="list-group-item">背景色</a>
+							<a href="helper_classes.html" class="list-group-item">辅助类</a>
+							<a href="grid.html" class="list-group-item">栅格系统</a>
+						</div>
+						<a class="list-group-item-title list-group-title-components">
+							<span class="glyphicon glyphicon-tags"></span>
+							组件
+						</a>
+						<div class="list-group-components">
+							<a href="glyphicons.html" class="list-group-item">字体图标</a>
+							<a href="#" class="list-group-item active">下拉菜单</a>
+							<a href="button_group.html" class="list-group-item">按钮组</a>
+							<a href="btn_dropdown.html" class="list-group-item">按钮式下拉菜单</a>
+							<a href="input_group.html" class="list-group-item">输入框组</a>
+							<a href="nav.html" class="list-group-item">导航</a>
+							<a href="navbar.html" class="list-group-item">导航条</a>
+							<a href="breadcrumbs.html" class="list-group-item">路径导航</a>
+							<a href="pagination.html" class="list-group-item">分页</a>
+							<a href="labels.html" class="list-group-item">标签</a>
+							<a href="badges.html" class="list-group-item">徽章</a>
+							<a href="jumbotron.html" class="list-group-item">巨幕</a>
+							<a href="page_header.html" class="list-group-item">页头</a>
+							<a href="thumbnails.html" class="list-group-item">缩略图</a>
+							<a href="alerts.html" class="list-group-item">警告框</a>
+							<a href="progress.html" class="list-group-item">进度条</a>
+							<a href="panels.html" class="list-group-item">面板</a>
+							<a href="list_group.html" class="list-group-item">列表组</a>
+							<a href="well.html" class="list-group-item">Well</a>
+						</div>
+						<a class="list-group-item-title list-group-title-javascript">
+							<span class="glyphicon glyphicon-tags"></span>
+							插件
+						</a>
+						<div class="list-group-javascript">
+							<a href="modals.html" class="list-group-item">模态框</a>
+							<a href="scrollspy.html" class="list-group-item">滚动监听</a>
+							<a href="tabs.html" class="list-group-item">标签页</a>
+							<a href="tooltips.html" class="list-group-item">工具提示</a>
+							<a href="carousel.html" class="list-group-item">轮播</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<div>
+						<div class="panel panel-success">
+							<div class="panel-heading">下拉菜单</div>
+						</div>
+						<ol>
+							<li><a href="#first">菜单向下弹出</a></li>
+							<li><a href="#second">菜单向上弹出</a></li>
+							<li><a href="#third">对齐</a></li>
+							<li><a href="#fourth">标题</a></li>
+							<li><a href="#fifth">分割线</a></li>
+							<li><a href="#sixth">禁用项</a></li>
+						</ol>
+					</div>
+					<div id="first">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className1">
+									复制类名
+								</button>
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-1')">
+									示例代码
+								</button>
+								<span><code id="className1">dropdown</code></span>
+							</div>
+							<div class="panel-body">
+								<div class="alert alert-warning">
+									将下拉菜单触发器和下拉菜单都包裹在 <code>.dropdown</code> 里，或者另一个声明了 <code>position: relative;</code> 的元素。然后加入组成菜单的 HTML 代码。
+								</div>
+								<div class="bs-example"><span>示例：</span><br>
+									<div class="dropdown">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-1">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code1"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+        Dropdown
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;</span><span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;/button&gt</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="second">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className2">
+									复制类名
+								</button>
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-2')">
+									示例代码
+								</button>
+								<span><code id="className2">dropup</code></span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<div class="dropup">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-2">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code2" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code2"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropup"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+        Dropdown
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;</span><span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;/button&gt</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="third">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className3">
+									复制类名
+								</button>
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-3')">
+									示例代码
+								</button>
+								<span><code id="className3">dropdown-menu-right</code></span>
+							</div>
+							<div class="panel-body">
+								<div class="alert alert-warning">
+									默认情况下，下拉菜单自动沿着父元素的上沿和左侧被定位为 100% 宽度。 为 <code>.dropdown-menu</code> 添加 <code>.dropdown-menu-right</code> 类可以让菜单右对齐。<br>
+									事实上，你也可以改变 <code>.dropdown-menu</code> 的 <code>left</code> 属性来设置菜单的位置。
+								</div>
+								<div class="bs-example"><span>示例：</span><br>
+									<div class="dropdown">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-3">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code3" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code3"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+        Dropdown
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;</span><span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;/button&gt</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="fourth">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className4">
+									复制类名
+								</button>
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-4')">
+									示例代码
+								</button>
+								<span><code id="className4">dropdown-header</code></span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<div class="dropdown">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li class="dropdown-header">标题</li>
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-4">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code4" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code4"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+        Dropdown
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;</span><span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;/button&gt</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>标题<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="fifth">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className5">
+									复制类名
+								</button>
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-5')">
+									示例代码
+								</button>
+								<span><code id="className5">divider</code></span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<div class="dropdown">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+											<li class="divider" role="separator"></li>
+											<li><a href="#">item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-5">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code5" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code5"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+        Dropdown
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;</span><span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;/button&gt</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span> <span class="na">role=</span><span class="s">"separator"</span><span class="na">&gt;&lt;/li&gt;</span>        
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div id="sixth">
+						<div class="panel panel-info">
+							<div class="panel-heading example-head">
+								<button type="button" class="btn btn-success copy-to-clipboard" data-clipboard-action="copy" data-clipboard-target="#className6">
+									复制类名
+								</button>
+								<button type="button" class="btn btn-info btn-toggle-code" onclick="toggleCode('#panel-footer-6')">
+									示例代码
+								</button>
+								<span><code id="className6">disabled</code></span>
+							</div>
+							<div class="panel-body">
+								<div class="bs-example"><span>示例：</span><br>
+									<div class="dropdown">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											Dropdown
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="#">item</a></li>
+											<li class="disabled"><a href="#">item</a></li>
+											<li><a href="#">item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer" id="panel-footer-6">
+								<div class="zero-clipboard">
+									<span class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#code6" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</span>
+								</div>
+								<figure>
+<pre><code id="code6"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+        Dropdown
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;</span><span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;/button&gt</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<ul class="pager">
+						<li class="previous"><a href="glyphicons.html"><span>&larr;</span> Older</a></li>
+						<li class="next"><a href="button_group.html">Newer <span>&rarr;</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>天行健 君子以自强不息！地势坤 君子以厚德载物！</p>
+		</div>
+	</div>
+	<div class="to-top"><a href="#"><span class="glyphicon glyphicon-arrow-up"></span></a></div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script>
+		var clipboard = new Clipboard('.btn-clipboard');
+		var clipboard = new Clipboard('.copy-to-clipboard');
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
